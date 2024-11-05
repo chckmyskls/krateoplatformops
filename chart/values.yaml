@@ -1,4 +1,4 @@
-# {{=<% %>=}}
+# 
 ---
 # Default values for fireworks-app.
 # This is a YAML-formatted file.
@@ -7,7 +7,7 @@
 replicaCount: 1
 
 image:
-  repository: ghcr.io/<% organizationName %>/<% repositoryName %>
+  repository: ghcr.io/chckmyskls/chckmyskls/krateoplatformops
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
@@ -39,8 +39,8 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: <% serviceType %>
-  port: <% servicePort %>
+  type: NodePort
+  port: 31180
   
 ingress:
   enabled: false
