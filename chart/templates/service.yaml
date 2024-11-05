@@ -12,7 +12,7 @@ spec:
       protocol: TCP
       name: http
       {{- if eq .Values.service.type "NodePort" }}
-      nodePort: {{ .Values.service.port }}
+      nodePort: 31181
       {{- end }}
   selector:
     {{- include "fireworks-app.selectorLabels" . | nindent 4 }}
